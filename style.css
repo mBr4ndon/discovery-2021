@@ -3,6 +3,7 @@
     --color-dark-blue: #363f5f;
     --color-green: #49AA26;
     --color-light-green: #3dd705;
+    --color-red: #E92929;
 }
 
 * {
@@ -80,8 +81,8 @@ button:hover {
 }
 
 .button.cancel {
-    color: #E92929;
-    border: 2px solid #E92929;
+    color: var(--color-red);
+    border: 2px solid var(--color-red);
     border-radius: 0.25rem;
     height: 50px;
 
@@ -146,6 +147,9 @@ header h1 {
     background: var(--color-green);
     color: white;
 }
+.card.total.negative {
+    background: var(--color-red);
+}
 
 /* Table ===================================== */
 #transaction {
@@ -197,7 +201,7 @@ td.income {
     color: #12A454;
 }
 td.expense {
-    color: #E92929;
+    color: var(--color-red);
 }
 
 /* Modal ====================================== */

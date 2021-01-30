@@ -119,10 +119,22 @@ const DOM = {
         document
             .getElementById("total-display")
             .innerHTML = Utils.formatCurrency(Transaction.total());
+
+        if (Transaction.total() >= 0) {
+            document
+                .querySelector(".card.total")
+                .classList
+                .remove("negative")
+        } else {
+            document
+                .querySelector(".card.total")
+                .classList
+                .add("negative")
+        }
     },
     clearTransactions() {
         this.transactionsContainer.innerHTML = "";
-    }
+    },
 }
 
 // Methods' invocation ===========================================
